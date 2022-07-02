@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div className='mt-28'>
             <ToDo/>
-            <Footer></Footer>
+           
         </div>
     );
 };

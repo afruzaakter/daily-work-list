@@ -14,7 +14,7 @@ const ToDo = () => {
         const name = data.name;
         console.log(name);
 
-        const url = 'http://localhost:5000/work';
+        const url = 'https://lower-bunnyhug-38167.herokuapp.com/work';
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
@@ -31,7 +31,7 @@ const ToDo = () => {
             });
 
         // toast('Work task successfully added');
-        window.location.reload(true);
+        // window.location.reload(true);
     }
     return (
         <div className=' mt-48 m-32'>
@@ -39,7 +39,7 @@ const ToDo = () => {
                 <form className='d-flex flex-column'
                     onSubmit={handleSubmit(onSubmit)}>
                     <div>
-                    <input className='mb-2 p-3 border-2 border-primary rounded-md ' placeholder='New Task Name' {...register("name", { required: true, maxLength: 20 })} />
+                        <input className='mb-2 p-3 border-2 border-primary rounded-md ' placeholder='New Task Name' {...register("name", { required: true,  })} />
                     </div>
 
                     <input className=' btn btn-primary' type="submit" value=" Add Task" />
@@ -67,16 +67,16 @@ const ToDo = () => {
                             </tr>
                         </thead>
                         <tbody>
-                        {
-                            works.map(work => <SingleWork
-                                key={work._id}
-                                work={work}
-                            >
+                            {
+                                works.map(work => <SingleWork
+                                    key={work._id}
+                                    work={work}
+                                >
 
-                            </SingleWork>)
-                        }
+                                </SingleWork>)
+                            }
 
-                    </tbody>
+                        </tbody>
                     </table>
                 </div>
 

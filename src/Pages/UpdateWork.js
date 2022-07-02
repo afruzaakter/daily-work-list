@@ -6,8 +6,8 @@ const UpdateWork = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data =>{
         const name = data.name;
-        // const update = {name}
-        const url = `http://localhost:5000/work/${id}`;
+        const update = {name};
+        const url = `https://lower-bunnyhug-38167.herokuapp.com/work/${id}`;
     console.log(url);
 
     fetch(url, {
@@ -15,7 +15,7 @@ const UpdateWork = () => {
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify({name})
+      body: JSON.stringify(update)
     })
       .then(res => res.json())
       .then(data => {

@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useWorks from '../hooks/useWorks';
 
-const SingleWork = ({work}) => {
+const SingleWork = ({ work }) => {
     const [works, setWorks] = useWorks();
     const { _id, name } = work;
 
     const handleDelete = id => {
 
-      
+
         // delete from todo list
         const confirm = window.confirm('Are you sure?')
         if (confirm) {
-            const url = `http://localhost:5000/work/${id}`
+            const url = `https://lower-bunnyhug-38167.herokuapp.com/work/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
