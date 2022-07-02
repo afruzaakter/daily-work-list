@@ -39,10 +39,10 @@ const ToDo = () => {
                 <form className='d-flex flex-column'
                     onSubmit={handleSubmit(onSubmit)}>
                     <div>
-                    <input className='mb-2 p-3 border-2 border-primary rounded-md ' placeholder='Full Name' {...register("name", { required: true, maxLength: 20 })} />
+                    <input className='mb-2 p-3 border-2 border-primary rounded-md ' placeholder='New Task Name' {...register("name", { required: true, maxLength: 20 })} />
                     </div>
 
-                    <input className=' btn btn-primary' type="submit" value="Add New Bill" />
+                    <input className=' btn btn-primary' type="submit" value=" Add Task" />
                 </form>
             </div>
             <hr />

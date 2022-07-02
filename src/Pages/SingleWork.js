@@ -8,24 +8,7 @@ const SingleWork = ({work}) => {
 
     const handleDelete = id => {
 
-        // post from todo list to completed route
-
-        // const dName = name;
-        // const url = 'https://aqueous-crag-10378.herokuapp.com/completed';
-        // fetch(url, {
-        //     method: 'POST',
-        //     body: JSON.stringify({
-        //         dName
-        //     }),
-        //     headers: {
-        //         'Content-type': 'application/json; charset=UTF-8',
-        //     },
-        // })
-        //     .then((response) => response.json())
-        //     .then((data) => console.log(data));
-
-
-
+      
         // delete from todo list
         const confirm = window.confirm('Are you sure?')
         if (confirm) {
@@ -65,7 +48,7 @@ const SingleWork = ({work}) => {
 
             <th>
 
-                <Link to={`/update/${_id}`}><button> Update </button></Link>
+                <Link to={`/update/${_id}`}><button className="btn-btn-success"> Update </button></Link>
             </th>
             <th>
                 <button disabled={!change} onClick={() => handleDelete(_id)} className="btn btn-primary btn-xs">Done</button>
