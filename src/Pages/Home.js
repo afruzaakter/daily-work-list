@@ -1,10 +1,11 @@
 import React from 'react';
 import Footer from '../Share/Footer';
+import ToDo from './ToDo';
 
 const Home = () => {
     return (
-        <div>
-            <h1>This is home</h1>
+        <div className='mt-28'>
+            <ToDo/>
             <Footer></Footer>
         </div>
     );

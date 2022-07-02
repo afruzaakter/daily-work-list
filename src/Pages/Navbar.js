@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const menuItem = <>
        
-    <li className='mr-2 font-bold text-primary'><NavLink to="home">Completed Tasks</NavLink></li>
+    <li className='mr-2 font-bold text-primary'><NavLink to="/todo">To-Do-List </NavLink></li>
   
-    <li className='mr-2 font-bold text-primary'><NavLink to="todo">To-Do</NavLink></li>
+    <li className='mr-2 font-bold text-primary'><NavLink to="/completed"> Completed Tasks </NavLink></li>
     <li className='mr-2 font-bold text-primary'><NavLink to="/calendar">Calendar</NavLink></li>
 
 

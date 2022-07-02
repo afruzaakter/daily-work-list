@@ -2,6 +2,7 @@ import { format } from 'date-fns';
 import React, { useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+
 const Calendar = () => {
     const[date, setDate]=useState(new Date());
     return (
@@ -23,7 +24,7 @@ const Calendar = () => {
             <p className='text-2xl text-neutral font-bold'>Your Picked: <span className='text-secondary'>{format(date, 'PP')}</span> </p>
             </div>
             
-
+   
         </div>
     );
 };
